@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #1A1B21;
+  --main-heading-color: white;
+  --main-text-color: #DCDCDC;
+  --accent-color: #F3BF99;
+}
+ 
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #23252C;
+    color: var(--main-text-color);
+    font-family: Inter,  sans-serif;
+} 
+
+h1, h2, h3, h4, h5 {
+    color: var(--main-heading-color);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h2,h3,h4 {
+    color: F5F5F5;
+    font-size: 1em;
+}
+
+body {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    height: 100vh;
+}
+
+#root {
+    background: #1A1B21;
+    height: 100vh;
+    max-height: 780px;
+    width: 317px;
+
+    display: grid;
+    grid-template-rows: 1ff 1fr 1fr 1fr;
+    border-radius: 15px;
+    margin: auto auto;
+} 
+
+
+
+
+
+/* Info Component */
+.main--img {
+    min-height: 65%;
+    border-radius: 0;
+}
+
+.info--profile-img {
+    color: red;
+    min-height: 317px;
+    width: 100%;
+    color:red;
+    background: red;
+    background-image: url('./fake-profile-img.png') ;
+    background-repeat:no-repeat;
+    background-position: center;
+    object-fit: fill;
+    padding: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+
+/* Layout of Main content */
+.main--wrapper {
+    display: grid;
+    grid-template-columns: 33px auto 33px;
+    grid-template-rows: minmax(317px,1fr) auto auto auto;
+    grid-template-areas: 
+     "header header header" 
+     ". about ."
+     ". interests ."
+     "footer footer footer";
+}
+
+.info--container {
+    grid-area: header;
+}
+
+.about-section {
+    grid-area: about;
+    /* border: 1px solid red; */
+    align-self: end;
+    margin-top: 16px;
+}
+
+.interests-section {
+    grid-area: interests;
+}
+
+.footer--container {
+    grid-area: footer;
+    
+}
+
+.info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.info--heading {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.info--text {
+    font-size: 14px;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em; 
+    color: var(--accent-color);
+    padding:0;
+}
+
+.info--subtext {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px; 
+    padding:0;
+}
+
+.info--email {
+    min-width: max-content;
+    color: #1A1B21;
+    background: #D1D5DB;
+}
+
+.info--linkedin {
+    color: white;
+    background: #5093E2;
+    min-width: max-content;
+    color: white;
+}
+
+.info--container button {
+    padding: 0 24px;
+    border: none;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.info--buttons {
+   display: grid;
+   grid-template-columns:  1fr 1fr ;
+   grid-template-rows: 33px;
+   gap: 1em;
+   margin-left:26px;
+   margin-right:26px;
+   font-size: 14px;
+   margin-top: 0;
+   padding-top: 0;
+   
+}
+
+.info--buttons button {
+    margin-bottom: 0;
+}
+
+.info--svg {
+    height: 15px;
+    width: 16x;
+    margin: 0;
+    transform: translateY(3px);
+    margin-right: 2px;
+}
+
+/* About PAge */
+
+.about--heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 0;
+    color: white;
+}
+
+.about--text 
+{
+    padding:0;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    padding-top: 0;
+    margin-top: 0;
+    color: #DCDCDC;
+}
+
+/* INterests component   */
+.interests--heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 0;
+    color: white;
+}
+
+.interests--text 
+{
+    padding:0;
+    font-size: 11px;
+    line-height: 1.5;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 29px;
+    color: #DCDCDC;
+}
+
+
+/* Footer Component */
+.footer--container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    background: #161619;
+    min-height: 64px;
+    align-items:center;
+    
+}
+
+.footer--container img {
+    height: 25px;
+    width: 25px;
+}
+
