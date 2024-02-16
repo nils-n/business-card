@@ -5,6 +5,9 @@
 Deployed Version : [Netlify - Business Card](https://nils-business-card.netlify.app/)
 
 
+#### Credits 
+ - Foto: [Pexels - Martin Dufosset](https://www.pexels.com/@martin-dufosset-2252147/)
+
 ---- 
 
 Quick start:
